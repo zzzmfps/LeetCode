@@ -12,6 +12,5 @@ class Solution:
                 tmp = tmp[:-1]
             else:
                 tmp += s[i]
-        if tmp: return False
-        return True
+        return not tmp
     
