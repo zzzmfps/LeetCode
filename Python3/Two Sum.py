@@ -7,4 +7,4 @@ class Solution:
                 return [d[nums[i]], i]
             else:
                 d[target - nums[i]] = i
-        
+                
