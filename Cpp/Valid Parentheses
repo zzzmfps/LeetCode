@@ -6,7 +6,7 @@ public:
     {
         string par = "";
         for(auto x : s)
-            switch (x)
+            switch(x)
             {
                 case '(': par += '('; break;
                 case '[': par += '['; break;
