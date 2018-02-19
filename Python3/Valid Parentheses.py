@@ -1,4 +1,4 @@
-// 36ms, 100.0%
+# 36ms, 100.0%
 class Solution:
     def isValid(self, s):
         tmp, right, valid = s[0], ")]}", ["()", "[]", "{}"]
