@@ -1,7 +1,7 @@
 # 36ms, 100.0%
 class Solution:
     def longestCommonPrefix(self, strs):
-        if not strs: return ""
+        if not strs: return ''
         if len(strs) == 1: return strs[0]
         beg, mid, end = 0, 0, len(strs[0]) - 1
         while beg <= end:
@@ -15,5 +15,5 @@ class Solution:
                     return strs[0][: mid + 1]
                 else:
                     beg = mid
-        return ""
+        return ''
         
