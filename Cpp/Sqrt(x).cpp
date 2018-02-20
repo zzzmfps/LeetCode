@@ -8,7 +8,6 @@ public:
         while(r * r > x)
             r = (r + x / r) / 2;
         return r;
-        
         /*
         // Carmack's method
         int i;    // uint64_t for 8-bytes
