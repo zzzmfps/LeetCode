@@ -6,11 +6,10 @@ class Solution:
              "X": 10,   "IX": 9,   "V": 5,   "IV": 4,   "I": 1}
         res = i = 0
         while i < len(s):
-            if s[i : i + 2] in d:
-                res += d[s[i : i + 2]]
+            if s[i: i + 2] in d:
+                res += d[s[i: i + 2]]
                 i += 2
             else:
                 res += d[s[i]]
                 i += 1
         return res
-        
