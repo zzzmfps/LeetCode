@@ -7,11 +7,13 @@ class Solution:
         while beg <= end:
             mid = (beg + end + 1) // 2
             for s in strs:
-                if strs[0][:mid + 1] != s[:mid + 1]:
+                if strs[0][: mid + 1] != s[: mid + 1]:
                     end = mid - 1
                     break
             else:
-                if end == beg: return strs[0][:mid + 1]
-                else:          beg = mid
+                if end == beg:
+                    return strs[0][: mid + 1]
+                else:
+                    beg = mid
         return ""
         
