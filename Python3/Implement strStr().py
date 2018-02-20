@@ -1,13 +1,8 @@
-# 40ms, 100.0%
+# 36ms, 100.0%
 class Solution:
     def strStr(self, haystack, needle):
-        if not needle: return 0
-        trav, i, end1, end2 = 0, 0, len(haystack) - len(needle), len(needle) - 1
-        while trav <= end1:
-            while haystack[trav + i] == needle[i]:
-                if i == end2: return trav
-                else: i += 1
-            else:
-                trav, i = trav + 1, 0
+        for i in range(len(haystack) - len(needle) + 1):
+            if haystack[i: i + len(needle)] == needle:
+                return i
         return -1
         
