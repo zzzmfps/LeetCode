@@ -1,7 +1,7 @@
 # 36ms, 100.0%
 class Solution:
     def isValid(self, s):
-        tmp, right, valid = s[0], ")]}", ["()", "[]", "{}"]
+        tmp, right, valid = s[0], ')]}', ['()', '[]', '{}']
         for i in range(1, len(s)):
             if not tmp:
                 if s[i] in right:
@@ -11,6 +11,7 @@ class Solution:
             elif tmp[-1] + s[i] in valid:
                 tmp = tmp[:-1]
             else:
-                tmp += s[i]
+                table = [tmp, s[i]]
+                tmp = ''.join(table)
         return not tmp
     
