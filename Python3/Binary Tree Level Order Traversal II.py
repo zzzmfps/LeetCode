@@ -1,5 +1,6 @@
 # 40ms, 100.0%
 class Solution:
+    
     def levelOrderBottom(self, root):
         res = []
         self.dfs(root, 0, res)
