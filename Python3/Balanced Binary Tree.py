@@ -1,5 +1,6 @@
 # 60ms, 100.0%
 class Solution:
+    
     def isBalanced(self, root):
         return self.check(root) != -1
     
