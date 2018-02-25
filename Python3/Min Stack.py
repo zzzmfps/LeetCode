@@ -1,5 +1,5 @@
 # 60ms, 100.0%
-class MinStack(object):
+class MinStack:
 
     def __init__(self):
         self.min_stack = list()    # 'self.min_stack = self.min_record = []' is NOT correct
