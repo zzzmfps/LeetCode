@@ -11,7 +11,7 @@ class Solution(object):
                     cur, count = num, 1
         return cur
         '''
-        45ms, 89.88%
+        ### 45ms, 89.88%
         return sorted(nums)[len(nums) / 2]
         '''
         
