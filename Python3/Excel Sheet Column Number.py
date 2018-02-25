@@ -1,5 +1,5 @@
-# 47ms, 44.13%
-class Solution(object):
+# 56ms, 100.0%
+class Solution:
     def titleToNumber(self, s):
         res = 0
         for c in s:
