@@ -1,4 +1,4 @@
-# 73ms, 89.47%
+# 60ms, 100.0%
 class MinStack(object):
 
     def __init__(self):
