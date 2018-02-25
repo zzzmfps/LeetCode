@@ -1,5 +1,5 @@
-# 28ms, 75.06%
-class Solution(object):
+# 36ms, 100.0%
+class Solution:
     def convertToTitle(self, n):
         res = ''
         while n:
