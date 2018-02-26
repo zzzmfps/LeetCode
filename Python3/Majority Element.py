@@ -9,8 +9,7 @@ class Solution:
                 count -= 1
                 if count == 0: cur, count = num, 1
         return cur
-        '''
-        ### 52ms, 100.0%
-        return sorted(nums)[len(nums) // 2]
-        '''
-        
+
+# 52ms, 100.0%
+        # return sorted(nums)[len(nums) // 2]
+    
