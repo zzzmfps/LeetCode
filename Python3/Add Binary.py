@@ -7,7 +7,4 @@ class Solution:
             return self.addBinary(self.addBinary(a[0: -1], b[0: -1]), '1') + '0'
         else:
             return self.addBinary(a[0: -1], b[0: -1]) + str(int(a[-1]) + int(b[-1]))
-        '''
-        ### one line costs 40ms
-        return bin(int(a, 2) + int(b, 2))[2: ]
-        '''
+    
