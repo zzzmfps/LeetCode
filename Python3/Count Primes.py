@@ -1,7 +1,7 @@
 # 168ms, 100.0%
 class Solution:
     def countPrimes(self, n):
-        primes = [1] * n    # use 0, 1 instead of True, False will be much faster
+        primes = [1] * n    # use 1, 0 instead of True, False will be much faster
         primes[: 2] = [0] * 2    # avoid checking whether n is less than 3
         for i in range(2, int(n ** 0.5) + 1):
             if primes[i]:
