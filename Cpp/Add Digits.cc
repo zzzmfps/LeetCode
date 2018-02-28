@@ -1,4 +1,4 @@
-# 7ms, 8.82%
+// 7ms, 8.82%
 class Solution {
 public:
     int addDigits(int num) {
