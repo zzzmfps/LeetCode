@@ -1,4 +1,4 @@
-# 26ms, 28.44%
+// 26ms, 28.44%
 class Solution {
 public:
     int missingNumber(vector<int> &nums) {
