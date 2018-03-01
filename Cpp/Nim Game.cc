@@ -1,4 +1,4 @@
-# 2ms, 18.57%
+// 2ms, 18.57%
 class Solution {
 public:
     bool canWinNim(int n) {
