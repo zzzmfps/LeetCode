@@ -1,4 +1,4 @@
-# 2ms, 33.33%
+// 2ms, 33.33%
 class Solution {
 public:
     bool wordPattern(string pattern, string str) {
