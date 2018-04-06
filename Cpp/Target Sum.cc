@@ -8,7 +8,9 @@ public:
 
 private:
     int subsetSum(const vector<int> &nums, int s) {
-        int dp[s + 1] = {1};
+        // int dp[s + 1] = {1};    // valid in C99 standard
+        bool *dp = new bool[sum + 1]();    // add '()' to initialize
+        dp[0] = true;
         for (auto n : nums)    // select n
             for (int i = s; i >= n; --i)    // for each number i in [n, s]
                 dp[i] += dp[i - n];    // dp[i] up to the state of dp[i - n]
