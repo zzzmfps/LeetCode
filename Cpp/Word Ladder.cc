@@ -35,34 +35,6 @@ class Solution
             {
                 string word = *iter;
                 wordSet.erase(word);
-                /* costs 52ms (86.77%) when using lambda to check hamming distance
-                static auto check = [](const string &x, const string &y) {
-                    int size = x.size();
-                    bool one = false;
-                    for (int j = 0; j < size; ++j)
-                        if (x[j] != y[j])
-                            if (!one)
-                                one = true;
-                            else
-                                return false;
-                    return true;
-                };  // lambda expr declared outside the class Solution
-                for (const auto &word : *phead)
-                {
-                    wordSet.erase(word);
-                    for (auto &p : *ptail)
-                        if (check(word, p))
-                            return dist;
-                    for (auto it = wordSet.begin(); it != wordSet.end();)
-                        if (check(word, *it))
-                        {
-                            temp.insert(*it);
-                            wordSet.erase(*(it++));
-                        }
-                        else
-                            ++it;
-                }
-                */
                 for (int p = 0; p < word.size(); ++p)
                 {
                     char letter = word[p];
