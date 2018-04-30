@@ -5,7 +5,7 @@ class Solution:
         n = len(num)
         for i, j in itertools.combinations(range(1, n), 2):
             a, b = num[:i], num[i:j]
-            if a[0] == '0' and 1 < i: continue
+            if a[0] == '0' and 1 < i: return False
             if b[0] == '0' and i + 1 < j: continue
             while j < n:
                 c = str(int(a) + int(b))
