@@ -6,7 +6,7 @@ class Solution:
         :rtype: int
         """
 
-        def seperate():
+        def separate():
             sep, tmp = [], []
             for n in nums:
                 if n != 0:
@@ -16,7 +16,7 @@ class Solution:
                     tmp = []
             return sep + [tmp] if tmp else sep
 
-        sep = seperate()
+        sep = separate()
         max_p = nums[0] if len(sep) == 1 else 0
         for s in sep:
             left = right = whole = 1
