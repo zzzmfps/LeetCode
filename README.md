@@ -1,2 +1,2 @@
-# LeetCode-Memo
+# LeetCode
 # https://leetcode.com/zzz100826/
