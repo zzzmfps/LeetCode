@@ -23,7 +23,7 @@ class Solution
             both guaranteed to return positive integer.
             ** C++14 or older ** <algorithm>
             int std::__gcd(int m, int n)
-            will return a negative integer if n < 0. 'std::__lcm' does not exist
+            will return a negative integer if m < 0. 'std::__lcm' does not exist
             */
             int g = gcd(A, B);
             A /= g;
