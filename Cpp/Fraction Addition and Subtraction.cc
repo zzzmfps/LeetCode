@@ -17,11 +17,11 @@ class Solution
             A = a * B + A * b;
             B *= b;
             /* <numeric>
-            ** C++17
+            ** C++17 ** <numeric>
             int std::gcd(int, int): greatest common divisor
             int std::lcm(int, int): least common multiple
             both guaranteed to return positive integer.
-            ** C++14 or older
+            ** C++14 or older ** <algorithm>
             int std::__gcd(int m, int n)
             will return a negative integer if n < 0. 'std::__lcm' does not exist
             */
