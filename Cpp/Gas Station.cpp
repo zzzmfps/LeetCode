@@ -23,8 +23,8 @@ class Solution
         vector<int> sol;  // 2, find possible solutions/starts
         sol.reserve(size);
         int index = 0;
-        while (gas[index] >= cost[index] && index < size) ++index;
-        while (gas[index] < cost[index] && index < size) ++index;
+        while (index < size && gas[index] >= cost[index]) ++index;
+        while (index < size && gas[index] < cost[index]) ++index;
         if (index == size) return 0;  // only 1 TypeA field, and starts from index 0
         int tmp = index;
         do {
