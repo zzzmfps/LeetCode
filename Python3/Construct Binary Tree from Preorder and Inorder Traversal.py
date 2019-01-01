@@ -1,4 +1,4 @@
-# 472ms, 9.77%
+# 88ms, 87.83%
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -17,14 +17,12 @@ class Solution:
         def build(preo, ino, pl, pr, il, ir):
             if pl > pr: return None
             nodeval = preo[pl]
+            idx = val_to_index[nodeval]
             head = TreeNode(nodeval)
-            if pl < pr:
-                idx = il
-                while ino[idx] != nodeval:
-                    idx += 1
-                head.left = build(preo, ino, pl + 1, pl + idx - il, il, idx - 1)
-                head.right = build(preo, ino, pl + idx - il + 1, pr, idx + 1, ir)
+            head.left = build(preo, ino, pl + 1, pl + idx - il, il, idx - 1)
+            head.right = build(preo, ino, pl + idx - il + 1, pr, idx + 1, ir)
             return head
 
         n = len(preorder)
+        val_to_index = {val: idx for idx, val in enumerate(inorder)}
         return build(preorder, inorder, 0, n - 1, 0, n - 1)
