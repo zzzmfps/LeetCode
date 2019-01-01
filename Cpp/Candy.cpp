@@ -13,6 +13,7 @@ class Solution
         int n = ratings.size();
         vector<int> candies, limit;
         candies.resize(n), limit.reserve(n + 2);
+        
         // 1, find all lowest points which equal to 1
         limit.push_back(-1);
         if (ratings[0] <= ratings[1]) candies[0] = 1, limit.push_back(0);
@@ -20,6 +21,7 @@ class Solution
             if (ratings[i - 1] >= ratings[i] && ratings[i] <= ratings[i + 1]) candies[i] = 1, limit.push_back(i);
         if (ratings[n - 2] >= ratings[n - 1]) candies[n - 1] = 1, limit.push_back(n - 1);
         limit.push_back(n);
+        
         // 2, extend from points equal to 1
         for (int i = 1, c = limit.size() - 1; i < c; ++i) {
             auto &left = limit[i - 1], &pivot = limit[i], &right = limit[i + 1];
