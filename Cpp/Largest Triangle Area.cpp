@@ -15,7 +15,7 @@ class Solution
         for (int i = 0; i < pts - 2; ++i)
             for (int j = i + 1; j < pts - 1; ++j)
                 for (int k = j + 1; k < pts; ++k) maxArea = max(maxArea, getArea(points, i, j, k));
-        return maxArea;
+        return 0.5 * maxArea;
     }
 
   private:
