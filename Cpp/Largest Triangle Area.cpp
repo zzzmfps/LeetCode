@@ -22,16 +22,6 @@ class Solution
     double getArea(vector<vector<int>> &points, int i, int j, int k)
     {
         auto &p1 = points[i], &p2 = points[j], &p3 = points[k];  // A, B, C
-        double l1, l2, fa, fb, fc;                               // |AB|, h, factor (a,b,c) in eq aX + bY + c = 0
-        double deltaX = p2[0] - p1[0], deltaY = p1[1] - p2[1];
-        l1 = sqrt(pow(deltaX, 2) + pow(deltaY, 2));
-        if (deltaY == 0) {
-            fa = 0, fb = 1;
-        } else {
-            fa = 1, fb = deltaX / deltaY;
-        }
-        fc = -(fa * p1[0] + fb * p1[1]);
-        l2 = abs(fa * p3[0] + fb * p3[1] + fc) / sqrt(fa * fa + fb * fb);
-        return 0.5 * l1 * l2;
+        return abs((p2[0] - p1[0]) * (p3[1] - p1[1]) - (p3[0] - p1[0]) * (p2[1] - p1[1]));
     }
 };
