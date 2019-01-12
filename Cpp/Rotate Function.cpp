@@ -1,4 +1,4 @@
-// 4ms
+// 4ms, 100.0%
 static int x = []() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
