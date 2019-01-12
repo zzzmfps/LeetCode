@@ -1,4 +1,4 @@
-# 56ms
+# 56ms, 97.18%
 class Solution:
     def lengthOfLIS(self, nums):
         """
