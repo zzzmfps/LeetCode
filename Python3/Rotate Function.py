@@ -1,4 +1,4 @@
-# 88ms
+# 88ms, 18.52%
 class Solution:
     def maxRotateFunction(self, A):
         """
