@@ -1,4 +1,4 @@
-// 28ms, 100.0%; 9MB, 100.0%
+// 16ms, 100.0%; 9.3MB, 100.0%
 static int x = []() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -11,11 +11,11 @@ private:
 	int f[100][100];
 
 public:
-	int strangePrinter(const string &s)
+	int strangePrinter(string &s)
 	{
 		memset(f, 0, sizeof(f));
-		int len = s.size();
-		return dp(s, 0, len - 1);
+		s.erase(unique(s.begin(), s.end()), s.end());
+		return dp(s, 0, s.size() - 1);
 	}
 
 private:
