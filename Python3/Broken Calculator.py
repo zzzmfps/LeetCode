@@ -6,6 +6,6 @@ class Solution:
             if Y & 1:
                 Y += 1
             else:
-                Y //= 1
+                Y //= 2
             count += 1
         return count + X - Y
