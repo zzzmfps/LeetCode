@@ -1,4 +1,4 @@
-// 384ms, 31.37%
+# 384ms, 31.37%
 class Solution:
     def rangeBitwiseAnd(self, m, n):
         """
