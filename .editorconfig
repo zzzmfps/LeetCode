@@ -7,9 +7,9 @@ insert_final_newline = true
 # Matches multiple files with brace expansion notation
 [*.{cpp,cc,py}]
 charset = utf-8
-indent_style = tab
+indent_style = space
 indent_size = 4
-trim_trailing_whitespace = true
+trim_trailing_whitespace = false
 
 [*.md]
 trim_trailing_whitespace = false
