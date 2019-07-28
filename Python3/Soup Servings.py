@@ -1,4 +1,4 @@
-# 44ms, 92.31%; 14.4MB, 10.00%
+# 44ms, 92.31%; 14.5MB, 10.00%
 class Solution:
     def __init__(self):
         self.record = {}
@@ -15,5 +15,4 @@ class Solution:
         if (A - 75, B - 25) not in self.record: self.record[(A - 75, B - 25)] = self.choice(A - 75, B - 25)
         if (A - 50, B - 50) not in self.record: self.record[(A - 50, B - 50)] = self.choice(A - 50, B - 50)
         if (A - 25, B - 75) not in self.record: self.record[(A - 25, B - 75)] = self.choice(A - 25, B - 75)
-        self.record[(A, B)] = 0.25 * (self.record[(A - 100, B)] + self.record[(A - 75, B - 25)] + self.record[(A - 50, B - 50)] + self.record[(A - 25, B - 75)])
-        return self.record[(A, B)]
+        return 0.25 * (self.record[(A - 100, B)] + self.record[(A - 75, B - 25)] + self.record[(A - 50, B - 50)] + self.record[(A - 25, B - 75)])
