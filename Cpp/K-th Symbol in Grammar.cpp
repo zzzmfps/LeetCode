@@ -6,12 +6,12 @@ public:
     {
         bool isNot = false;
         while (K > 2) {
-            int row = 1 + ceil(log2(K));
+            int row = ceil(log2(K));
             if (row & 1) {
-                K = (1 << (row - 1)) - K + 1;
-            } else {
                 isNot ^= true;
-                K -= (1 << (row - 2));
+                K -= (1 << (row - 1));
+            } else {
+                K = (1 << row) - K + 1;
             }
         }
         return (isNot ? 2 - K : K - 1);
