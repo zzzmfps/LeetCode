@@ -1,29 +1,23 @@
-// 624ms, 5.12%; 21MB, 100.00%
+// 228ms, 64.06%; 25.1MB, 100.00%
 class Solution
 {
 public:
     vector<int> rearrangeBarcodes(const vector<int> &barcodes)
     {
         int size = barcodes.size();
-        unordered_map<int, int> tmp;
-        tmp.reserve(size);
-        for (auto b : barcodes) tmp[b] += 1;
-        vector<pair<int, int>> count(tmp.begin(), tmp.end());
-        sort(count.begin(), count.end(),
-             [](const pair<int, int> &x, const pair<int, int> &y) { return x.second > y.second; }
-        );
+        unordered_map<int, int> m;
+        m.reserve(size);
+        for (auto b : barcodes) m[b] += 1;
+        set<pair<int, int>> s;
+        for (auto &p : m) s.insert(make_pair(p.second, p.first));
 
-        int last = 0;
+        int j = 0;
         vector<int> res(size);
-        for (int i = 0; i < size; ++i) {
-            int it1 = (count[0].first == last ? 1 : 0);
-            res[i] = last = count[it1].first;
-            count[it1].second -= 1;
-            int it2 = it1 + 1;
-            if (it2 == count.size() || count[it1].second >= count[it2].second) continue;
-            while (it2 != count.size() && count[it1].second < count[it2].second) ++it2;
-            swap(count[it1].first, count[it2 - 1].first);
-            swap(count[it1].second, count[it2 - 1].second);
+        for (auto it = s.rbegin(); it != s.rend(); ++it) {
+            for (int i = 0, cnt = it->first; i < cnt; i += 1, j += 2) {
+                if (j >= size) j = 1;
+                res[j] = it->second;
+            }
         }
         return res;
     }
