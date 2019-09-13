@@ -3,6 +3,7 @@ class Solution:
     def maximalRectangle(self, matrix: list) -> int:
         if not matrix: return 0
         row, col = len(matrix), len(matrix[0])
+        // the consecutive '1's begin at index left[j] and end at index right[j](not included)
         left, right, height = [0] * col, [col] * col, [0] * col
         res = 0
         for i in range(row):
