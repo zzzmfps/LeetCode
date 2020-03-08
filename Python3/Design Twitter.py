@@ -1,4 +1,4 @@
-# 180ms, 15.16%; 18.3MB, 52.63%
+# 92ms, 53.29%; 18.3MB, 52.63%
 from collections import defaultdict, deque
 from itertools import count
 from typing import List
@@ -27,7 +27,7 @@ class Twitter:
         Tweets must be ordered from most recent to least recent.
         """
         tmp = [y for x in self.users[userId] | {userId} for y in self.tweets[x]]
-        return [x[1] for x in sorted(tmp, key=lambda x: x[0])][:10]
+        return [x[1] for x in sorted(tmp, key=lambda x: x[0])[:10]]
 
     def follow(self, followerId: int, followeeId: int) -> None:
         """
