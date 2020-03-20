@@ -1,4 +1,4 @@
-// 0ms, 100.00%; 36.8MB, 7.84%
+// 0ms, 100.00%; 37MB, 7.84%
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -9,14 +9,14 @@
  */
 class Solution {
     public static ListNode middleNode(ListNode head) {
-        ListNode fast = head, slow = head;
+        ListNode fast = head;
         while (fast.next != null) {
             fast = fast.next;
             if (fast.next != null) {
                 fast = fast.next;
             }
-            slow = slow.next;
+            head = head.next;
         }
-        return slow;
+        return head;
     }
 }
