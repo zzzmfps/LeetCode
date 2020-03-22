@@ -7,7 +7,7 @@
  * }
  */
 func middleNode(head *ListNode) *ListNode {
-	var fast = head
+	fast := head
 	for fast.Next != nil {
 		head = head.Next
 		fast = fast.Next
