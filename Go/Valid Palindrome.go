@@ -1,9 +1,9 @@
 // 0ms, 100.00%; 2.7MB, 100.00%
 func isPalindrome(s string) bool {
 	for i, j := 0, len(s)-1; ; i, j = i+1, j-1 {
-		for ; i < len(s) && isNotAlpha(s[i]); i++ {
+		for ; i < len(s) && isNotNumAlpha(s[i]); i++ {
 		}
-		for ; j > -1 && isNotAlpha(s[j]); j-- {
+		for ; j > -1 && isNotNumAlpha(s[j]); j-- {
 		}
 		if i >= j {
 			break
@@ -15,7 +15,7 @@ func isPalindrome(s string) bool {
 	return true
 }
 
-func isNotAlpha(r byte) bool {
+func isNotNumAlpha(r byte) bool {
 	// numeric: 48 ~ 57
 	// alpha, uppercase: 65 ~ 90
 	// alpha, lowercase: 97 ~ 122
