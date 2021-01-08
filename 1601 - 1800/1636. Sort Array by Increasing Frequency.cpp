@@ -4,11 +4,9 @@
 #include <vector>
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> frequencySort(vector<int> &nums)
-    {
+    vector<int> frequencySort(vector<int> &nums) {
         map<int, int> rec;
         for (auto n : nums) ++rec[n];
         vector<pair<int, int>> sorts;

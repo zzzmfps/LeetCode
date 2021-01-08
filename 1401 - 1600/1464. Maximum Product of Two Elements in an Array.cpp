@@ -2,11 +2,9 @@
 #include <vector>
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int maxProduct(const vector<int> &nums) const
-    {
+    int maxProduct(const vector<int> &nums) const {
         int x1 = 0, x2 = 0;
         for (auto n : nums) {
             if (n > x1) {
