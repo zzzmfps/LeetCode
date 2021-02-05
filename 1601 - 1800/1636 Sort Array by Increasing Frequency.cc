@@ -1,7 +1,5 @@
 // 12 ms, 80.43 %; 11.8 MB, 45.73 %
-#include <algorithm>
-#include <map>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution {

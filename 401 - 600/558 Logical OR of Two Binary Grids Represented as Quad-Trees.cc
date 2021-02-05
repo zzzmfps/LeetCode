@@ -1,18 +1,19 @@
 // 104ms, 75.90%
-/*
-// Definition for a QuadTree node.
+#include <bits/stdc++.h>
+using namespace std;
+
 class Node {
 public:
     bool val;
     bool isLeaf;
-    Node* topLeft;
-    Node* topRight;
-    Node* bottomLeft;
-    Node* bottomRight;
+    Node *topLeft;
+    Node *topRight;
+    Node *bottomLeft;
+    Node *bottomRight;
 
     Node() {}
 
-    Node(bool _val, bool _isLeaf, Node* _topLeft, Node* _topRight, Node* _bottomLeft, Node* _bottomRight) {
+    Node(bool _val, bool _isLeaf, Node *_topLeft, Node *_topRight, Node *_bottomLeft, Node *_bottomRight) {
         val = _val;
         isLeaf = _isLeaf;
         topLeft = _topLeft;
@@ -21,18 +22,16 @@ public:
         bottomRight = _bottomRight;
     }
 };
-*/
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    Node *intersect(Node *quadTree1, Node *quadTree2)
-    {
+class Solution {
+public:
+    Node *intersect(Node *quadTree1, Node *quadTree2) {
         if (quadTree1->isLeaf) return quadTree1->val ? quadTree1 : quadTree2;
         if (quadTree2->isLeaf) return quadTree2->val ? quadTree2 : quadTree1;
 
