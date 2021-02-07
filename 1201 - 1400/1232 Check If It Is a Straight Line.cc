@@ -1,9 +1,10 @@
 // 12ms, 55.15%; 10.3MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    bool checkStraightLine(const vector<vector<int>> &coordinates)
-    {
+    bool checkStraightLine(const vector<vector<int>> &coordinates) {
         bool flag = true;
         if (coordinates[0][0] == coordinates[1][0]) {
             int x = coordinates[0][0];

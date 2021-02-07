@@ -1,9 +1,10 @@
 // 24ms, 94.85%; 14.5MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string minRemoveToMakeValid(const string &s)
-    {
+    string minRemoveToMakeValid(const string &s) {
         int slen = s.size();
         stack<int> st;
         vector<int> deleted;

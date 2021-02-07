@@ -1,9 +1,10 @@
 // 68ms, 76.12%; 13.5MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<vector<int>> shiftGrid(const vector<vector<int>> &grid, int k)
-    {
+    vector<vector<int>> shiftGrid(const vector<vector<int>> &grid, int k) {
         int row = grid.size(), col = grid[0].size();
         if ((k %= row * col) == 0) return grid;
         vector<vector<int>> res(row, vector<int>(col));

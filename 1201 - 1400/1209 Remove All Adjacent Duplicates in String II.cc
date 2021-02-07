@@ -1,9 +1,10 @@
 // 12ms, 91.20%; 10.6MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string removeDuplicates(string s, int k)
-    {
+    string removeDuplicates(string s, int k) {
         vector<pair<char, int>> v;
         for (auto c : s) {
             if (v.empty() || v.back().first != c) {

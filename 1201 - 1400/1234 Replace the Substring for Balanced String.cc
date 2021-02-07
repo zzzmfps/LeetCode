@@ -1,9 +1,10 @@
 // 16ms, 96.80%; 9.7MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int balancedString(const string &s)
-    {
+    int balancedString(const string &s) {
         int a[4] = {}, avg = s.size() >> 2, ret = s.size();
         for (auto c : s) a[toInt(c)] += 1;
         for (int i = 0; i < 4; ++i) a[i] = max(0, a[i] - avg);
@@ -20,8 +21,7 @@ public:
     }
 
 private:
-    int toInt(char c)
-    {
+    int toInt(char c) {
         switch (c) {
             case 'Q': return 0;
             case 'W': return 1;

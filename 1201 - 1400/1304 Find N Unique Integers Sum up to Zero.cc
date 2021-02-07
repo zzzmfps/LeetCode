@@ -1,9 +1,10 @@
 // 20ms, 9.72%; 8.5MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> sumZero(int n)
-    {
+    vector<int> sumZero(int n) {
         vector<int> res(n);
         n &= 0x7FFFFFFE;
         while (n) {

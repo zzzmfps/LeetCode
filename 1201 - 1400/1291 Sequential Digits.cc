@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.6MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> sequentialDigits(int low, int high)
-    {
+    vector<int> sequentialDigits(int low, int high) {
         string seq = "123456789";
         int len1 = 1 + int(log10(low)), len2 = 1 + int(log10(high));
         vector<int> ret;

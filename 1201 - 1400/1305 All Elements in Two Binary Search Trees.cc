@@ -1,18 +1,17 @@
 // 260ms, 94.79%; 56.4MB, 100.00%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    vector<int> getAllElements(TreeNode *root1, TreeNode *root2)
-    {
+    vector<int> getAllElements(TreeNode *root1, TreeNode *root2) {
         vector<int> ascending; // result
         stack<TreeNode *> st1, st2;
         // add two redundant pointers as sentinels, avoid second while-loop

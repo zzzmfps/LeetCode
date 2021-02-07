@@ -1,18 +1,17 @@
 // 52ms, 52.98%; 32.1MB, 100.00%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    int deepestLeavesSum(TreeNode *root)
-    {
+    int deepestLeavesSum(TreeNode *root) {
         int _sum = 0;
         queue<TreeNode *> q;
         q.push(root);
