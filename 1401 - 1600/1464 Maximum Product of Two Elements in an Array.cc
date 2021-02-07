@@ -1,5 +1,5 @@
 // 8 ms, 85.97 %; 10.2 MB, 96.67 %
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
