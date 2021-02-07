@@ -1,6 +1,8 @@
 // 104ms, 89.93%; 39.1MB, 56.10%
-class LRUCache
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class LRUCache {
 private:
     int _capacity;
     unordered_map<int, pair<int, list<int>::iterator>> cache;
@@ -9,16 +11,14 @@ private:
 public:
     LRUCache(int capacity) : _capacity(capacity) {}
 
-    int get(int key)
-    {
+    int get(int key) {
         auto it = cache.find(key);
         if (it == cache.end()) return -1;
         update(it);
         return it->second.first;
     }
 
-    void put(int key, int value)
-    {
+    void put(int key, int value) {
         auto it = cache.find(key);
         if (it == cache.end()) {
             if (store.size() == _capacity) {
@@ -33,8 +33,7 @@ public:
     }
 
 private:
-    void update(unordered_map<int, pair<int, list<int>::iterator>>::iterator &it)
-    {
+    void update(unordered_map<int, pair<int, list<int>::iterator>>::iterator &it) {
         store.erase(it->second.second);
         store.push_front(it->first);
         it->second.second = store.begin();

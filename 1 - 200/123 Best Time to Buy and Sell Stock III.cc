@@ -1,9 +1,10 @@
 // 4ms, 98.23%; 9.5MB, 78.57%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int maxProfit(const vector<int> &prices)
-    {
+    int maxProfit(const vector<int> &prices) {
         // 4 maximum profits, when we just
         // buy 1st stock, sell 1st stock, buy 2nd stock, sell 2nk stock
         int buy1 = INT_MIN, sell1 = 0, buy2 = INT_MIN, sell2 = 0;

@@ -1,19 +1,20 @@
 // 3ms, 71.24%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
-    ios_base::sync_with_stdio(false);  // toggles off the synchronization
-    cin.tie(nullptr);                  // ties cin with nullptr, not cout
+    ios_base::sync_with_stdio(false); // toggles off the synchronization
+    cin.tie(nullptr);                 // ties cin with nullptr, not cout
     return 0;
 }();
 
-class Solution
-{
-  private:
+class Solution {
+private:
     vector<string> res;
     vector<string> cur;
 
-  public:
-    vector<string> fullJustify(const vector<string> &words, int maxWidth)
-    {
+public:
+    vector<string> fullJustify(const vector<string> &words, int maxWidth) {
         auto push_str = [this, maxWidth](string &&sep) {
             int end = cur.size();
             string head(cur[0]);

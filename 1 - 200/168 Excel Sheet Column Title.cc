@@ -1,12 +1,12 @@
 // 2ms, 14.37%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string convertToTitle(int n)
-    {
+    string convertToTitle(int n) {
         string ans;
-        while (n)
-        {
+        while (n) {
             ans += char((n - 1) % 26 + 'A');
             n = (n - 1) / 26;
         }

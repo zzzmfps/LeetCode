@@ -1,10 +1,12 @@
 // 20ms, 94.19%; 10.4MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int maximalRectangle(const vector<vector<char>> &matrix)  // dp
+    int maximalRectangle(const vector<vector<char>> &matrix) // dp
     {
-        if(matrix.empty()) return 0;
+        if (matrix.empty()) return 0;
         int row = matrix.size(), col = matrix[0].size();
         vector<int> left(col), right(col, col), height(col);
         int res = 0;

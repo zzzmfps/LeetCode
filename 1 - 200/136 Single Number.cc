@@ -1,12 +1,12 @@
 // 17ms, 29.20%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int singleNumber(vector<int> &nums)
-    {
+    int singleNumber(vector<int> &nums) {
         int ans = 0;
-        for(int x : nums)
-            ans ^= x;
+        for (int x : nums) ans ^= x;
         return ans;
     }
 };

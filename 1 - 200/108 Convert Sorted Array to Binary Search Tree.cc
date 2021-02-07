@@ -1,17 +1,24 @@
 // 16ms, 19.75%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    TreeNode *sortedArrayToBST(vector<int> &nums)
-    {
-        if(!nums.size()) return nullptr;
+    TreeNode *sortedArrayToBST(vector<int> &nums) {
+        if (!nums.size()) return nullptr;
         TreeNode *root = helper(nums, 0, nums.size() - 1);
         return root;
     }
-    
-    TreeNode *helper(vector<int> &nums, int begin, int end)
-    {
-        if(begin > end) return nullptr;
+
+    TreeNode *helper(vector<int> &nums, int begin, int end) {
+        if (begin > end) return nullptr;
         int mid = (begin + end + 1) / 2;
         TreeNode *root = new TreeNode(nums[mid]);
         root->left = helper(nums, begin, mid - 1);

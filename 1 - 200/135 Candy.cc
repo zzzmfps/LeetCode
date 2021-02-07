@@ -1,15 +1,16 @@
 // 8ms, 99.78%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    int candy(const vector<int> &ratings)
-    {
+class Solution {
+public:
+    int candy(const vector<int> &ratings) {
         int n = ratings.size();
         vector<int> candies;
         candies.resize(n, 1);

@@ -1,23 +1,22 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+// space complexity S(n) = k, 8ms, 100.00%; 9.9MB, 25.55%
+#include <bits/stdc++.h>
+using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-// space complexity S(n) = k, 8ms, 100.00%; 9.9MB, 25.55%
-class Solution
-{
+class Solution {
 public:
-    ListNode *detectCycle(ListNode *head)
-    {
+    ListNode *detectCycle(ListNode *head) {
         if (!head) return nullptr;
 
         ListNode *p1 = head, *p2 = head;

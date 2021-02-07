@@ -1,21 +1,20 @@
 // 7ms, 7.22%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string countAndSay(int n)
-    {
+    string countAndSay(int n) {
         string cns("1");
-        while(--n)
-        {
+        while (--n) {
             char temp = cns[0];
             int count = 0;
             string res = "";
             stringstream ss;
-            for(auto x : cns)
-                if(x == temp)
+            for (auto x : cns)
+                if (x == temp)
                     ++count;
-                else
-                {
+                else {
                     ss << count;
                     res = res + ss.str() + temp;
                     count = 1;

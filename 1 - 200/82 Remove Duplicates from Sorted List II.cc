@@ -1,17 +1,16 @@
 // 8ms, 91.67%; 9.4MB, 7.32%
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+class Solution {
 public:
-    ListNode *deleteDuplicates(ListNode *head)
-    {
+    ListNode *deleteDuplicates(ListNode *head) {
         if (!head || !head->next) return head;
         ListNode *root = new ListNode(0);
         root->next = head;

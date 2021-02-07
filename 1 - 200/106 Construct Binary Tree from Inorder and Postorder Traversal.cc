@@ -1,24 +1,23 @@
 // 8ms, 94.57%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    TreeNode *buildTree(const vector<int> &inorder, const vector<int> &postorder)
-    {
+class Solution {
+public:
+    TreeNode *buildTree(const vector<int> &inorder, const vector<int> &postorder) {
         if (inorder.empty()) return nullptr;
 
         TreeNode *root = new TreeNode(postorder.back());

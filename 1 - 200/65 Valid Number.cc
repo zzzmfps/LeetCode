@@ -1,15 +1,16 @@
 // 8ms, 100.0%; 8.3MB, 98.41%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    bool isNumber(const string &s)
-    {
+    bool isNumber(const string &s) {
         if (s.empty()) return false;
         int x = s.find_first_not_of(' '), y = s.find_last_not_of(' ');
         if (x == string::npos) return false;
@@ -20,8 +21,7 @@ public:
     }
 
 private:
-    bool isInteger(string s)
-    {
+    bool isInteger(string s) {
         if (s.empty() || s.find(' ') != string::npos) return false;
         int idx = (s[0] == '+' || s[0] == '-') ? 1 : 0;
         if (s.size() == idx) return false;
@@ -30,8 +30,7 @@ private:
         return true;
     }
 
-    bool isFraction(string s)
-    {
+    bool isFraction(string s) {
         if (s.empty() || s.find(' ') != string::npos || s.find_first_not_of(".+-") == string::npos) return false;
         int idx = s.find('.'), size = s.size();
         if (idx == string::npos) return isInteger(s);

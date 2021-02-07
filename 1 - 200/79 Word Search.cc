@@ -1,14 +1,15 @@
 // 68ms, 52.50%; 16.6MB, 51.47%
-class Solution // see python ver. for comments
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 private:
     typedef vector<pair<int, int>> vpair;
     vector<vector<bool>> isVisited;
     pair<int, int> hint;
 
 public:
-    bool exist(const vector<vector<char>> &board, const string &word)
-    {
+    bool exist(const vector<vector<char>> &board, const string &word) {
         vpair start = find(board, word[0]);
         if (start.empty()) return false;
         int row = board.size(), col = board[0].size(), length = word.size();
@@ -37,8 +38,7 @@ public:
     }
 
 private:
-    vpair find(const vector<vector<char>> &board, char ch, bool useHint = false)
-    {
+    vpair find(const vector<vector<char>> &board, char ch, bool useHint = false) {
         vpair ret;
         if (useHint) {
             int i = hint.first, j = hint.second;

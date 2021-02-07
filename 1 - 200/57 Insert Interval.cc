@@ -1,24 +1,23 @@
 // 4ms, 100.0%
-/**
- * Definition for an interval.
- * struct Interval {
- *     int start;
- *     int end;
- *     Interval() : start(0), end(0) {}
- *     Interval(int s, int e) : start(s), end(e) {}
- * };
- */
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Interval {
+    int start;
+    int end;
+    Interval() : start(0), end(0) {}
+    Interval(int s, int e) : start(s), end(e) {}
+};
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<Interval> insert(const vector<Interval> &intervals, Interval newInterval)
-    {
+class Solution {
+public:
+    vector<Interval> insert(const vector<Interval> &intervals, Interval newInterval) {
         auto iter1 = intervals.begin();
         while (iter1 != intervals.end() && iter1->end < newInterval.start) ++iter1;
         auto iter2 = iter1;

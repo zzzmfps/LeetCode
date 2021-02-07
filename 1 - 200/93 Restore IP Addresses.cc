@@ -1,4 +1,7 @@
 // 4ms, 49.26%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     vector<string> restoreIpAddresses(const string &s) {
@@ -13,20 +16,20 @@ public:
                 for (int c = b + 1; c < b + 4; ++c) {
                     string C = string(s.begin() + b, s.begin() + c);
                     if (!check(C)) continue;
-                    
+
                     int d = s.size();
                     if (d <= c) break;
                     if (d - c > 3) continue;
                     string D = string(s.begin() + c, s.begin() + d);
                     if (!check(D)) continue;
-                    
+
                     res.push_back(A + "." + B + "." + C + "." + D);
                 }
             }
         }
         return res;
     }
-    
+
 private:
     bool check(const string &n) {
         if (n.empty()) return false;

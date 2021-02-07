@@ -1,9 +1,10 @@
 // 4ms, 58.30%; 8.5MB, 78.26%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int compareVersion(const string &version1, const string &version2)
-    {
+    int compareVersion(const string &version1, const string &version2) {
         int len1 = version1.size(), len2 = version2.size();
         int idx1 = 0, idx2 = 0;
         while (idx1 < len1 && idx2 < len2) {
