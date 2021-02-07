@@ -1,4 +1,7 @@
 // 4ms, 100.00%; 9.8MB, 63.83%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -12,16 +15,16 @@ struct Node {
     Node(int v = 0, bool ie = false) : val(v), isEnd(ie) {}
 };
 
-class MapSum
-{
+class MapSum {
 private:
     Node *root;
 
 public:
-    MapSum() { root = new Node(); }
+    MapSum() {
+        root = new Node();
+    }
 
-    void insert(const string &key, int val)
-    {
+    void insert(const string &key, int val) {
         Node *tmp = helper(key);
         Node *trav = root;
         if (tmp && tmp->isEnd) {
@@ -43,15 +46,13 @@ public:
         }
     }
 
-    int sum(const string &prefix)
-    {
+    int sum(const string &prefix) {
         Node *res = helper(prefix);
         return res ? res->val : 0;
     }
 
 private:
-    Node *helper(const string &x)
-    {
+    Node *helper(const string &x) {
         Node *trav = root;
         for (auto c : x) {
             if (trav->nxt.find(c) == trav->nxt.end()) return nullptr;

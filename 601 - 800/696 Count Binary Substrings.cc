@@ -1,9 +1,10 @@
 // 32ms, 97.30%; 12.6MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int countBinarySubstrings(const string &s)
-    {
+    int countBinarySubstrings(const string &s) {
         char clast = s[0] ^ 1, cur = s[0];
         int ilast = 0, icur = 0, res = 0;
         for (auto c : s) {

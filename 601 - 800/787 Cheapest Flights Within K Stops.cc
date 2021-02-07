@@ -1,15 +1,16 @@
 // 20ms, 79.97%; 11MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int findCheapestPrice(int n, const vector<vector<int>> &flights, int src, int dst, int K)
-    {
+    int findCheapestPrice(int n, const vector<vector<int>> &flights, int src, int dst, int K) {
         vector<int> price(n, 2e4);
         price[src] = 0;
         vector<int> tmp(price);

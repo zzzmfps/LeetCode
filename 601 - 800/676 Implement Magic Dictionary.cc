@@ -1,12 +1,14 @@
 // 4ms, 100.00%; 9.3MB, 75.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class MagicDictionary
-{
+class MagicDictionary {
 private:
     unordered_map<int, vector<string>> umap;
 
@@ -15,14 +17,12 @@ public:
     MagicDictionary() {}
 
     /** Build a dictionary through a list of words */
-    void buildDict(const vector<string> &dict)
-    {
+    void buildDict(const vector<string> &dict) {
         for (const auto &str : dict) umap[str.size()].push_back(str);
     }
 
     /** Returns if there is any word in the trie that equals to the given word after modifying exactly one character */
-    bool search(const string &word)
-    {
+    bool search(const string &word) {
         int size = word.size();
         if (umap.find(size) == umap.end()) return false;
         for (const auto &str : umap[size])
@@ -31,8 +31,7 @@ public:
     }
 
 private:
-    bool check(const string &x, const string &y)
-    {
+    bool check(const string &x, const string &y) {
         bool flag = false;
         for (int i = 0, size = x.size(); i < size; ++i) {
             if (x[i] == y[i]) continue;

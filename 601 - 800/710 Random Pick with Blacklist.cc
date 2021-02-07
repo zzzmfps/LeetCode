@@ -1,14 +1,15 @@
 // 224ms, 57.62%; 54.5MB, 33.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 private:
     int num;
     set<int> bl;
     vector<int> available;
 
 public:
-    Solution(int N, const vector<int> &blacklist)
-    {
+    Solution(int N, const vector<int> &blacklist) {
         num = N;
         bl = set(blacklist.begin(), blacklist.end());
         bl.insert(N);
@@ -26,8 +27,7 @@ public:
         }
     }
 
-    int pick()
-    {
+    int pick() {
         int ret;
         if (available.empty()) {
             while (true) {

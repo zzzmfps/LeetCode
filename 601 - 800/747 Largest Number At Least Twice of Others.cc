@@ -1,15 +1,16 @@
 // 4ms, 100.00%; 8.6MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int dominantIndex(const vector<int> &nums)
-    {
+    int dominantIndex(const vector<int> &nums) {
         int size = nums.size();
         if (size == 1) return 0;
         int maxIdx = 0, second = 1;

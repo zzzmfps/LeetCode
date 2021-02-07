@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 9.2MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int calPoints(const vector<string> &ops)
-    {
+    int calPoints(const vector<string> &ops) {
         vector<int> scores;
         scores.reserve(ops.size());
         for (auto &v : ops) {

@@ -1,9 +1,10 @@
 // 24ms, 80.23%; 10.5MB, 44.44%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<vector<int>> floodFill(const vector<vector<int>> &image, int sr, int sc, int newColor)
-    {
+    vector<vector<int>> floodFill(const vector<vector<int>> &image, int sr, int sc, int newColor) {
         int row = image.size(), col = image[0].size(), oldColor = image[sr][sc];
         vector<vector<int>> res(image);
         vector<vector<bool>> visited(row, vector<bool>(col));

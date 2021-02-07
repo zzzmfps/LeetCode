@@ -1,9 +1,10 @@
 // 4ms, 98.75%; 9.9MB, 82.35%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> findRedundantConnection(const vector<vector<int>> &edges)
-    {
+    vector<int> findRedundantConnection(const vector<vector<int>> &edges) {
         int size = edges.size();
         vector<int> list(size + 1);
         for (int i = 1; i <= size; ++i) list[i] = i;
@@ -17,8 +18,7 @@ public:
     }
 
 private:
-    int findRoot(vector<int> &list, int x)
-    {
+    int findRoot(vector<int> &list, int x) {
         int tmp = x;
         while (x != list[x]) x = list[x];
         while (tmp != x) {
@@ -29,8 +29,7 @@ private:
         return x;
     }
 
-    void join(vector<int> &list, int x, int y)
-    {
+    void join(vector<int> &list, int x, int y) {
         int xx = findRoot(list, x), yy = findRoot(list, y);
         list[xx] = yy;
     }

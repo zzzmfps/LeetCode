@@ -1,9 +1,10 @@
 // 48ms, 94.85%; 12.4MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int numDecodings(const string &s)
-    {
+    int numDecodings(const string &s) {
         if (s[0] == 48) return 0;
         long long n2 = 1, n1 = (s[0] == 42 ? 9 : 1), n0 = 0;
         for (int i = 1, size = s.size(); i < size; ++i) {

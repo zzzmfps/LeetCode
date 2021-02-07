@@ -1,9 +1,10 @@
 // 16ms, 56.70%; 9.3MB, 94.44%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int findLengthOfLCIS(const vector<int> &nums)
-    {
+    int findLengthOfLCIS(const vector<int> &nums) {
         int res = 0;
         int curLen = 0, last = -1;
         for (auto n : nums) {

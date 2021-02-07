@@ -1,18 +1,17 @@
 // 52ms, 53.07%; 25.6MB, 5.55%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2)
-    { // will change structure and data of the given two trees
+    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) { // will change structure and data of the given two trees
         if (!t1 && !t2) return nullptr;
         if (!t1 || !t2) return (t1 ? t1 : t2);
         t1->val += t2->val;
@@ -28,8 +27,7 @@ public:
     }
 
 private:
-    void helper(TreeNode *&node1, TreeNode *node2, stack<TreeNode *> &st1, stack<TreeNode *> &st2)
-    {
+    void helper(TreeNode *&node1, TreeNode *node2, stack<TreeNode *> &st1, stack<TreeNode *> &st2) {
         if (node1 && node2) {
             node1->val += node2->val;
             st1.push(node1);

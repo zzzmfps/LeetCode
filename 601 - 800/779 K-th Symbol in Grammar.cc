@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.5MB, 8.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int kthGrammar(int N, int K)
-    {
+    int kthGrammar(int N, int K) {
         bool isNot = false;
         while (K > 2) {
             int row = ceil(log2(K));

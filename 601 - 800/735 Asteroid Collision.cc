@@ -1,15 +1,16 @@
 // 12ms, 98.48%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<int> asteroidCollision(vector<int> &asteroids)
-    {
+class Solution {
+public:
+    vector<int> asteroidCollision(vector<int> &asteroids) {
         int pos, neg = 0, size = asteroids.size();
         while (findNextPair(asteroids, pos, neg)) {
             do {
@@ -28,9 +29,8 @@ class Solution
         return asteroids;
     }
 
-  private:
-    bool findNextPair(const vector<int> &asteroids, int &x, int &y)
-    {
+private:
+    bool findNextPair(const vector<int> &asteroids, int &x, int &y) {
         for (int i = y, end = asteroids.size() - 1; i < end; ++i) {
             if (asteroids[i] > 0 && asteroids[i + 1] < 0) {
                 x = i, y = i + 1;

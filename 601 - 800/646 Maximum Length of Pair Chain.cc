@@ -1,9 +1,10 @@
 // 52ms, 92.65%; 17.1MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int findLongestChain(vector<vector<int>> &pairs)
-    {
+    int findLongestChain(vector<vector<int>> &pairs) {
         auto cmp0 = [](const auto &x, const auto &y) { return x[0] < y[0]; };
         auto cmp1 = [](const auto &x, const auto &y) { return x[1] < y[1]; };
 

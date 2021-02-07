@@ -1,9 +1,10 @@
 // 20ms, 79.79%; 17.5MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int kInversePairs(int n, int k)
-    {
+    int kInversePairs(int n, int k) {
         int limit = n * (n - 1) / 2;
         if (k < 0 || k > limit) return 0;
         if (k * 2 > limit) k = limit - k;

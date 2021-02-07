@@ -1,9 +1,10 @@
 // 8ms, 99.75%; 8.9MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> kthSmallestPrimeFraction(const vector<int> &A, int K)
-    { // binary search based
+    vector<int> kthSmallestPrimeFraction(const vector<int> &A, int K) { // binary search based
         int size = A.size();
         double l = 0.0, r = 1.0; // all fractions' values are within (0, 1)
         while (true) {

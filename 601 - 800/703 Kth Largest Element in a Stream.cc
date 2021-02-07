@@ -1,18 +1,19 @@
 // 28ms, 100.00%; 19.3MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class KthLargest
-{
+class KthLargest {
 private:
     vector<int> arr;
 
 public:
-    KthLargest(int k, const vector<int> &nums)
-    {
+    KthLargest(int k, const vector<int> &nums) {
         copy(nums.begin(), nums.end(), back_inserter(arr));
         make_heap(arr.begin(), arr.end(), greater<int>());
         if (arr.size() < k) {
@@ -26,8 +27,7 @@ public:
         }
     }
 
-    int add(int val)
-    {
+    int add(int val) {
         if (val > arr[0]) {
             pop_heap(arr.begin(), arr.end(), greater<int>());
             arr.back() = val;

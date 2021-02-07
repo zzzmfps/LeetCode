@@ -1,15 +1,16 @@
 // 8ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<int> findErrorNums(const vector<int> &nums)
-    {
+class Solution {
+public:
+    vector<int> findErrorNums(const vector<int> &nums) {
         vector<int> res;
         bool *isExist = new bool[nums.size() + 1]{};
         for (const auto x : nums)

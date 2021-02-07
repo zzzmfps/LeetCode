@@ -1,15 +1,16 @@
 // 12ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<int> exclusiveTime(int n, const vector<string> &logs)
-    {
+class Solution {
+public:
+    vector<int> exclusiveTime(int n, const vector<string> &logs) {
         vector<int> times;
         times.resize(n);
 
@@ -19,11 +20,11 @@ class Solution
         for (int i = 1, num = logs.size(); i < num; ++i) {
             auto &x = logs[i];
             int curFunc = getFunctionId(x), curTime = getTimeStamp(x);
-            if (getFunctionState(x)) {  // start
+            if (getFunctionState(x)) { // start
                 times[st.top()] += curTime - lastTime;
                 st.push(curFunc);
                 lastTime = curTime;
-            } else {  // end
+            } else { // end
                 times[curFunc] += curTime - lastTime + 1;
                 st.pop();
                 lastTime = curTime + 1;
@@ -32,21 +33,18 @@ class Solution
         return times;
     }
 
-  private:
-    int getFunctionId(const string &s)
-    {
+private:
+    int getFunctionId(const string &s) {
         int x = s.find(':');
         return stoi(s.substr(0, x));
     }
 
-    bool getFunctionState(const string &s)
-    {
+    bool getFunctionState(const string &s) {
         int x = s.find(':');
         return (s[x + 1] == 's' ? true : false);
     }
 
-    int getTimeStamp(const string &s)
-    {
+    int getTimeStamp(const string &s) {
         int x = s.rfind(':');
         return stoi(s.substr(x + 1));
     }

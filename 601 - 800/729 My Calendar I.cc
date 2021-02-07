@@ -1,27 +1,25 @@
 // 44ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false); // toggles off the synchronization
     cin.tie(nullptr);                 // ties cin with nullptr, not cout
     return 0;
 }();
 
-class MyCalendar
-{
-  private:
+class MyCalendar {
+private:
     map<int, int, greater<int>> booked;
 
-  public:
-    MyCalendar()
-    {
-    }
+public:
+    MyCalendar() {}
 
-    bool book(int start, int end)
-    {
+    bool book(int start, int end) {
         // lower_bound(x): find the first elem >= x (if less) || <= x (if greater)
         // upper_bound(x): find the first elem >  x (if less) || <  x (if greater)
         auto it = booked.upper_bound(start);
-        if (it != booked.end() && it->second > start || it != booked.upper_bound(end))
-            return false;
+        if (it != booked.end() && it->second > start || it != booked.upper_bound(end)) return false;
         booked[start] = end;
         return true;
     }

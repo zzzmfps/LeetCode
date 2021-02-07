@@ -1,9 +1,10 @@
 // 80ms, 64.64%; 13.2MB, 70.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<vector<int>> allPathsSourceTarget(const vector<vector<int>> &graph)
-    {
+    vector<vector<int>> allPathsSourceTarget(const vector<vector<int>> &graph) {
         vector<vector<int>> res;     // results
         int dest = graph.size() - 1; // destination
 

@@ -1,18 +1,17 @@
 // 16ms, 91.39%; 21.9MB, 44.44%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    vector<double> averageOfLevels(TreeNode *root)
-    {
+    vector<double> averageOfLevels(TreeNode *root) {
         vector<double> res;
         vector<TreeNode *> st;
         st.push_back(root);

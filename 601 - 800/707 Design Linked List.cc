@@ -1,6 +1,8 @@
 // 40ms, 97.55%; 19.6MB, 33.33%
-class MyLinkedList
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class MyLinkedList {
 private:
     struct LinkedNode {
         int val;
@@ -12,38 +14,33 @@ private:
 
 public:
     /** Initialize your data structure here. */
-    MyLinkedList()
-    {
+    MyLinkedList() {
         head = new LinkedNode(-1);
         tail = new LinkedNode(-1);
         head->next = tail, tail->prev = head;
     }
 
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
-    int get(int index)
-    {
+    int get(int index) {
         auto node = get_node_pointer(index);
         return (node ? node->val : -1);
     }
 
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be
      * the first node of the linked list. */
-    void addAtHead(int val)
-    {
+    void addAtHead(int val) {
         addAtIndex(0, val);
     }
 
     /** Append a node of value val to the last element of the linked list. */
-    void addAtTail(int val)
-    {
+    void addAtTail(int val) {
         addAtIndex(length, val);
     }
 
     /** Add a node of value val before the index-th node in the linked list.
      * If index equals to the length of linked list, the node will be appended to the end of linked list.
      * If index is greater than the length, the node will not be inserted. */
-    void addAtIndex(int index, int val)
-    {
+    void addAtIndex(int index, int val) {
         auto shifted = (index == length ? tail : get_node_pointer(index));
         if (!shifted) return;
         auto previous = shifted->prev;
@@ -54,8 +51,7 @@ public:
     }
 
     /** Delete the index-th node in the linked list, if the index is valid. */
-    void deleteAtIndex(int index)
-    {
+    void deleteAtIndex(int index) {
         auto deleted = get_node_pointer(index);
         if (!deleted) return;
         auto _prev = deleted->prev, _next = deleted->next;
@@ -64,8 +60,7 @@ public:
     }
 
 private:
-    LinkedNode *get_node_pointer(int index)
-    {
+    LinkedNode *get_node_pointer(int index) {
         LinkedNode *node = nullptr;
         if (index < 0 || index >= length) return node;
         if ((index << 1) < length) { // near head

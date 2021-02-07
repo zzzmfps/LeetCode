@@ -1,9 +1,10 @@
 // 8ms, 93.24%; 9.2MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    bool canTransform(const string &start, const string &end)
-    {
+    bool canTransform(const string &start, const string &end) {
         // 'R' moves to right in "RXXX" and 'L' to left in "XXXL"
         // then it comes to be "XXRX" and "LXXX" or something likewise
         // thus the relative order of 'R' and 'L' remains
