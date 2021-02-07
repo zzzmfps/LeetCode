@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.7MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int maxNumberOfBalloons(const string &text)
-    {
+    int maxNumberOfBalloons(const string &text) {
         int instance[26] = {}, tmp[26] = {};
         instance[0] = instance[1] = instance[13] = 1;
         instance[11] = instance[14] = 2;

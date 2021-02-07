@@ -1,12 +1,13 @@
 // 140ms, 18.87%; 39.1MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 private:
-    const int delta[16] = { -1, -1, -1, 0, -1, 1, 0, 1, 1, 1, 1, 0, 1, -1, 0, -1 };
+    const int delta[16] = {-1, -1, -1, 0, -1, 1, 0, 1, 1, 1, 1, 0, 1, -1, 0, -1};
 
 public:
-    int shortestPathBinaryMatrix(vector<vector<int>> &grid)
-    {
+    int shortestPathBinaryMatrix(vector<vector<int>> &grid) {
         if (grid[0][0] || grid.back().back()) return -1;
         int row = grid.size(), col = grid[0].size();
         grid.back().back() = -1;

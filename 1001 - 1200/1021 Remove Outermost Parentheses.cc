@@ -1,9 +1,10 @@
 // 4ms, 87.53%; 8.8MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string removeOuterParentheses(const string &S)
-    {
+    string removeOuterParentheses(const string &S) {
         string res = "";
         int tmp = 0, beg = 1, i = 1, size = S.size();
         while (i < size) {

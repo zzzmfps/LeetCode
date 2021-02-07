@@ -1,9 +1,10 @@
 // 228ms, 64.06%; 25.1MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> rearrangeBarcodes(const vector<int> &barcodes)
-    {
+    vector<int> rearrangeBarcodes(const vector<int> &barcodes) {
         int size = barcodes.size();
         unordered_map<int, int> m;
         m.reserve(size);

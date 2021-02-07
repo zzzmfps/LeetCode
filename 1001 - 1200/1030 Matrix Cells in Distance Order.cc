@@ -1,15 +1,16 @@
 // 116ms, 74.14%; 17.7MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<vector<int>> allCellsDistOrder(int R, int C, int r0, int c0)
-    {
+    vector<vector<int>> allCellsDistOrder(int R, int C, int r0, int c0) {
         vector<vector<int>> res;
         res.push_back(vector<int>{r0, c0});
         int rx = abs(R - 1 - r0), cx = abs(C - 1 - c0);

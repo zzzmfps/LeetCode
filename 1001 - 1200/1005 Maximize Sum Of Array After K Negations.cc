@@ -1,9 +1,10 @@
 // 4ms, 98.04%; 9.2MB, 7.14%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int largestSumAfterKNegations(const vector<int> &A, int K)
-    {
+    int largestSumAfterKNegations(const vector<int> &A, int K) {
         multiset<int> tmp;
         int res = 0, _min = 0x7FFFFFFF;
         for (auto x : A) {

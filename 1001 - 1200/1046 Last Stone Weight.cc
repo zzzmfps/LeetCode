@@ -1,15 +1,16 @@
 // 0ms, 100.00%; 8.3MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int lastStoneWeight(vector<int> &stones)
-    {
+    int lastStoneWeight(vector<int> &stones) {
         make_heap(stones.begin(), stones.end());
         while (stones.size() > 1) {
             pop_heap(stones.begin(), stones.end());

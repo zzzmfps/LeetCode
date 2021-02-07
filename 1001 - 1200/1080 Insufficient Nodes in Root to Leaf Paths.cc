@@ -1,18 +1,17 @@
 // 32ms, 99.89%; 23.5MB, 100.00%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    TreeNode *sufficientSubset(TreeNode *root, int limit)
-    {
+    TreeNode *sufficientSubset(TreeNode *root, int limit) {
         TreeNode tmp(0);
         tmp.left = root;
         helper(&tmp, limit, 0);
@@ -20,8 +19,7 @@ public:
     }
 
 private:
-    bool helper(TreeNode *node, int limit, int val)
-    {
+    bool helper(TreeNode *node, int limit, int val) {
         if (!node) return false;
         val += node->val;
         if (node->left || node->right) {

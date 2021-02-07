@@ -1,9 +1,10 @@
 // 12ms, 85.14%; 10.8MB, 78.57%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<bool> prefixesDivBy5(const vector<int> &A)
-    {
+    vector<bool> prefixesDivBy5(const vector<int> &A) {
         int size = A.size();
         vector<bool> res;
         res.resize(size);

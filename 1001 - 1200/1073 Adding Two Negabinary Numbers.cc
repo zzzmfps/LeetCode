@@ -1,9 +1,10 @@
 // 12ms, 80.10%; 9.3MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> addNegabinary(vector<int> arr1, vector<int> arr2)
-    {
+    vector<int> addNegabinary(vector<int> arr1, vector<int> arr2) {
         helper(arr1, arr2);
         int i = arr1.size(), carry1 = 0, carry2 = 0;
         while (--i > -1) {
@@ -22,8 +23,7 @@ public:
     }
 
 private:
-    void helper(vector<int> &arr1, vector<int> &arr2)
-    {
+    void helper(vector<int> &arr1, vector<int> &arr2) {
         int size1 = arr1.size(), size2 = arr2.size();
         if (size1 < size2) {
             arr1.insert(arr1.begin(), size2 - size1, 0);

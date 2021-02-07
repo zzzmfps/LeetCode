@@ -1,9 +1,10 @@
 // 32ms, 38.56%; 9.9MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int largest1BorderedSquare(const vector<vector<int>> &grid)
-    {
+    int largest1BorderedSquare(const vector<vector<int>> &grid) {
         int row = grid.size(), col = grid[0].size();
         int res = min(row, col);
         while (res) {
@@ -18,8 +19,7 @@ public:
     }
 
 private:
-    bool check(const vector<vector<int>> &grid, int x, int y, int v)
-    {
+    bool check(const vector<vector<int>> &grid, int x, int y, int v) {
         if (v == 1) return grid[x][y] == 1;
         for (int i = 1; i < v; ++i)
             if (grid[x][y++] == 0) return false;

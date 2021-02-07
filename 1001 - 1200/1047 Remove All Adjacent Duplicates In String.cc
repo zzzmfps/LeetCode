@@ -1,9 +1,10 @@
 // 20ms, 87.43%; 13MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string removeDuplicates(const string &S)
-    {   // every duplicate removal consists of two adjacent and equal letters
+    string removeDuplicates(const string &S) { // every duplicate removal consists of two adjacent and equal letters
         stack<char> q;
         for (auto c : S) {
             if (q.empty() || q.top() != c) {

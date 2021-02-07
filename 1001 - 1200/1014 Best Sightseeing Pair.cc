@@ -1,15 +1,16 @@
 // 36ms, 98.87%; 15MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int maxScoreSightseeingPair(const vector<int> &A)
-    {
+    int maxScoreSightseeingPair(const vector<int> &A) {
         int i = 0, j = 1, size = A.size();
         vector<int> dp(size);
         dp[1] = A[0] + A[1] - 1;

@@ -1,9 +1,10 @@
 // 40ms, 88.91%; 23.3MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int numEquivDominoPairs(const vector<vector<int>> &dominoes)
-    {
+    int numEquivDominoPairs(const vector<vector<int>> &dominoes) {
         int tmp[10][10] = {};
         int res = 0;
         for (auto p : dominoes) tmp[p[0]][p[1]] += 1;

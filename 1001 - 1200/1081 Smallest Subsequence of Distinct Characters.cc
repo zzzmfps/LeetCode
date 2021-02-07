@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.6MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string smallestSubsequence(const string &text)
-    {
+    string smallestSubsequence(const string &text) {
         string res = "";
         int last[26], seen[26] = {}, n = text.size();
         for (int i = 0; i < n; ++i) last[text[i] - 97] = i;

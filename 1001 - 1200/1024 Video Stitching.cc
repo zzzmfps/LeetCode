@@ -1,15 +1,16 @@
 // 4ms, 100.00%; 9MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int videoStitching(const vector<vector<int>> &clips, int T)
-    {
+    int videoStitching(const vector<vector<int>> &clips, int T) {
         int arr[101] = {};
         for (const auto &v : clips) arr[v[0]] = max(arr[v[0]], v[1]);
         int ret = 0, last = 0, cur = 0;

@@ -1,26 +1,24 @@
 // 4ms, 97.12%; 15.4MB, 18.18%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    int maxAncestorDiff(TreeNode *root)
-    {
+    int maxAncestorDiff(TreeNode *root) {
         int ret = 0;
         helper(root, ret);
         return ret;
     }
 
 private:
-    pair<int, int> helper(TreeNode *node, int &ret)
-    {
+    pair<int, int> helper(TreeNode *node, int &ret) {
         if (node->left == node->right) return make_pair(node->val, node->val);
         int _max = 0, _min = 100000;
         if (node->left) {
