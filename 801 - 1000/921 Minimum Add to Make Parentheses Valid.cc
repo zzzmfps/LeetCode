@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.6MB, 46.15%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int minAddToMakeValid(const string &S)
-    {
+    int minAddToMakeValid(const string &S) {
         stack<char> st;
         for (auto c : S) {
             if (!st.empty() && st.top() == '(' && c == ')') {

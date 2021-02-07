@@ -1,15 +1,16 @@
 // 4ms, 100.00%; 8.6MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int numRookCaptures(const vector<vector<char>> &board)
-    {
+    int numRookCaptures(const vector<vector<char>> &board) {
         int i = 0, j = 0;
         while (true) {
             if (board[i][j] == 'R') break;

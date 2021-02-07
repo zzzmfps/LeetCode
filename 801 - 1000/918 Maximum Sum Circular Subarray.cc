@@ -1,15 +1,16 @@
 // 28ms, 100.00%; 12.9MB, 94.44%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int maxSubarraySumCircular(const vector<int> &A)
-    {
+    int maxSubarraySumCircular(const vector<int> &A) {
         int dp_min, dp_max, all_min, all_max;
         dp_min = dp_max = all_min = all_max = A[0];
         for (int i = 1, size = A.size(); i < size; ++i) {

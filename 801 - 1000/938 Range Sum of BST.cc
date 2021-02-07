@@ -1,18 +1,17 @@
 // 144ms, 86.45%; 41.1MB, 92.73%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    int rangeSumBST(TreeNode *root, int L, int R)
-    {
+    int rangeSumBST(TreeNode *root, int L, int R) {
         stack<TreeNode *> st;
         st.push(root);
         int _sum = 0;

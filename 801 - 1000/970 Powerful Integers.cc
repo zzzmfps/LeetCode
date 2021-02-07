@@ -1,16 +1,17 @@
 // 4ms, 68.86%; 8.6MB, 31.85%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto _ = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> powerfulIntegers(int x, int y, int bound)
-    {
-        vector<int> xExp = { 1 }, yExp = { 1 };
+    vector<int> powerfulIntegers(int x, int y, int bound) {
+        vector<int> xExp = {1}, yExp = {1};
         if (x > 1)
             for (int i = x; i < bound; i *= x) xExp.push_back(i);
         if (y > 1)

@@ -1,20 +1,19 @@
 // 136ms, 99.19%; 44.5MB, 98.46%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    bool possibleBipartition(int N, vector<vector<int>> &dislikes)
-    {
+    bool possibleBipartition(int N, vector<vector<int>> &dislikes) {
         if (dislikes.empty()) return true;
-        
-        auto cmp = [](vector<int> &x, vector<int> &y) {
-            return x[0] < y[0] || x[0] == y[0] && x[1] < y[1];
-        };
+
+        auto cmp = [](vector<int> &x, vector<int> &y) { return x[0] < y[0] || x[0] == y[0] && x[1] < y[1]; };
         sort(dislikes.begin(), dislikes.end(), cmp);
 
         int *arr = new int[N + 1]{};
@@ -27,7 +26,7 @@ public:
                 if (arr[x] == arr[y]) {
                     if (arr[x]) return false;
                     tmp.push_back(d);
-                } else if(arr[x]){
+                } else if (arr[x]) {
                     arr[y] = arr[x] ^ 3;
                 } else {
                     arr[x] = arr[y] ^ 3;

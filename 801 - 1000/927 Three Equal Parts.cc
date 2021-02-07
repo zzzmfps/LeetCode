@@ -1,15 +1,16 @@
 // 404ms, 8.84%; 12.1MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> threeEqualParts(const vector<int> &A)
-    {
+    vector<int> threeEqualParts(const vector<int> &A) {
         int end = A.size() - 1;
         auto idx1 = find(A.begin(), A.end(), 1);
         if (idx1 == A.end()) return vector<int>{0, end};
@@ -34,8 +35,7 @@ public:
     }
 
 private:
-    int compare(const vector<int> &A, int i1, int i2, int j1, int j2)
-    { // -1: less than, 0: equal to, 1: greater than
+    int compare(const vector<int> &A, int i1, int i2, int j1, int j2) { // -1: less than, 0: equal to, 1: greater than
         int d1 = i2 - i1, d2 = j2 - j1;
         int length = min(d1, d2), diff = d1 - d2;
         if (diff > 0) {

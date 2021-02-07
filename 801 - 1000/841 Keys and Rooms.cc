@@ -1,17 +1,18 @@
 // 8ms, 96.61%; 10.7MB, 87.06%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto _ = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    bool canVisitAllRooms(const vector<vector<int>> &rooms)
-    {
+    bool canVisitAllRooms(const vector<vector<int>> &rooms) {
         int count = 1, nums = rooms.size();
-        bool *arr = new bool[nums] {true};
+        bool *arr = new bool[nums]{true};
         vector<int> next = {0};
 
         for (int i = 0; i < next.size(); ++i) {

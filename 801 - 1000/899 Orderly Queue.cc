@@ -1,9 +1,10 @@
 // 4ms, 80.00%; 8.9MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string orderlyQueue(string S, int K)
-    {
+    string orderlyQueue(string S, int K) {
         if (K > 1) {
             sort(S.begin(), S.end());
             return S;

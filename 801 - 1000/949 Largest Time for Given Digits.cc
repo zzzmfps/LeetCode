@@ -1,15 +1,16 @@
 // 0ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    string largestTimeFromDigits(vector<int> &A)
-    {
+class Solution {
+public:
+    string largestTimeFromDigits(vector<int> &A) {
         sort(A.rbegin(), A.rend());
         if (A[3] > 2 || A[3] == 2 && (A[2] > 3 || A[1] > 5) || A[3] != 2 && A[2] > 5) return "";
 
@@ -27,9 +28,8 @@ class Solution
         return B;
     }
 
-  private:
-    int getLimitMax(vector<int> &A, int limit)
-    {
+private:
+    int getLimitMax(vector<int> &A, int limit) {
         for (int i = 0; i < 4; ++i)
             if (A[i] <= limit) {
                 int d = A[i];

@@ -1,25 +1,23 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
- static int x = []() {
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
- 
- 
- // 4ms, 100.00%; 10.7MB, 99.47%
-class Solution
-{
+
+// 4ms, 100.00%; 10.7MB, 99.47%
+class Solution0 {
 public:
-    bool isUnivalTree(TreeNode *root)
-    {
+    bool isUnivalTree(TreeNode *root) {
         int val = root->val;
         deque<TreeNode *> dq;
         dq.push_back(root);
@@ -37,11 +35,9 @@ public:
 };
 
 // 4ms, 100.00%; 10.8MB, 99.47%
-class Solution
-{
+class Solution1 {
 public:
-    bool isUnivalTree(TreeNode *root)
-    {
+    bool isUnivalTree(TreeNode *root) {
         if (root->left) {
             if (root->left->val != root->val) return false;
             if (!isUnivalTree(root->left)) return false;

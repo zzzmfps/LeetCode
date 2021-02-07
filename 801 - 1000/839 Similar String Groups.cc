@@ -1,9 +1,10 @@
 // 420ms, 82.96%; 21.3MB, 33.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int numSimilarGroups(vector<string> &A)
-    {
+    int numSimilarGroups(vector<string> &A) {
         int res = 0;
         while (!A.empty()) {
             ++res;
@@ -24,8 +25,7 @@ public:
     }
 
 private:
-    bool checkSimilar(const string &x, const string &y)
-    {
+    bool checkSimilar(const string &x, const string &y) {
         int count = 0;
         for (int i = 0, size = x.size(); i < size; ++i) {
             if (x[i] != y[i]) {

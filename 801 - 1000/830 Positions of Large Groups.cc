@@ -1,15 +1,16 @@
 // 4ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<vector<int>> largeGroupPositions(string S)
-    {
+class Solution {
+public:
+    vector<vector<int>> largeGroupPositions(string S) {
         int i = 0, j = 0, size = S.size();
         vector<vector<int>> res;
         while (i + 2 < size) {

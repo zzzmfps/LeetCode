@@ -1,9 +1,10 @@
 // 8ms, 78.01%; 8.7MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int bagOfTokensScore(vector<int> &tokens, int P)
-    {
+    int bagOfTokensScore(vector<int> &tokens, int P) {
         sort(tokens.begin(), tokens.end());
         int i = 0, j = tokens.size() - 1;
         int point = 0;

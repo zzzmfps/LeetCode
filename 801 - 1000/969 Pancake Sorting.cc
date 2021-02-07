@@ -1,9 +1,10 @@
 // 8ms, 63.90%; 8.8MB, 83.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> pancakeSort(vector<int> &A)
-    {
+    vector<int> pancakeSort(vector<int> &A) {
         vector<int> res;
         res.reserve(2 * A.size());
         for (int i = A.size() - 1; i > 0; --i) {

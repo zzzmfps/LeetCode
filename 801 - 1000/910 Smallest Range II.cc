@@ -1,15 +1,16 @@
 // 28ms, 99.56%; 9.8MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int smallestRangeII(vector<int> &A, int K)
-    {
+    int smallestRangeII(vector<int> &A, int K) {
         sort(A.begin(), A.end());
         int _min = A[0], _max = A.back(), ret = _max - _min;
         for (int i = 0, size = A.size() - 1; i < size; ++i) {

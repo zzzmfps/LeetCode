@@ -1,15 +1,16 @@
 // 40ms, 99.75%; 9.9MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> diStringMatch(const string &S)
-    {
+    vector<int> diStringMatch(const string &S) {
         int size = S.size();
         vector<int> res;
         res.resize(size + 1);

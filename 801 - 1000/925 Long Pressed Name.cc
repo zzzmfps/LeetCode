@@ -1,15 +1,16 @@
 // 4ms, 100.00%; 8.7MB, 96.49%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    bool isLongPressedName(const string &name, const string &typed)
-    {
+    bool isLongPressedName(const string &name, const string &typed) {
         int idx = 0;
         for (auto n : name) {
             int tmp = typed.find(n, idx);

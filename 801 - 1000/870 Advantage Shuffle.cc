@@ -1,9 +1,10 @@
 // 172ms, 73.39%; 21.5MB, 50.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<int> advantageCount(const vector<int> &A, const vector<int> &B)
-    {
+    vector<int> advantageCount(const vector<int> &A, const vector<int> &B) {
         vector<int> res(A.size());
         multiset<int> tmp(A.begin(), A.end());
         for (int i = 0, size = B.size(); i < size; ++i) {

@@ -1,15 +1,16 @@
 // 4ms, 99.62%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    int binaryGap(int N)
-    {
+class Solution {
+public:
+    int binaryGap(int N) {
         if ((N & (N - 1)) == 0) return 0;
         int ret = 1, lastIdx = 0;
         string binNum = getBinaryNumber(N);
@@ -24,9 +25,8 @@ class Solution
         return ret;
     }
 
-  private:
-    string getBinaryNumber(int n)
-    {
+private:
+    string getBinaryNumber(int n) {
         string ret = "";
         while (n) {
             ret += to_string(n & 1);

@@ -1,10 +1,11 @@
 // 20ms, 70.29%; 10.7MB, 33.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int flipgame(const vector<int> &fronts, const vector<int> &backs)
-    {
-        unordered_set<int> record;  // a vector cannot perform better, maybe because fronts.size() is small
+    int flipgame(const vector<int> &fronts, const vector<int> &backs) {
+        unordered_set<int> record; // a vector cannot perform better, maybe because fronts.size() is small
         for (int i = 0, size = fronts.size(); i < size; ++i)
             if (fronts[i] == backs[i]) record.insert(fronts[i]);
         int ret = 2001;

@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 9.1MB, 75.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<string> uncommonFromSentences(string A, const string &B)
-    {
+    vector<string> uncommonFromSentences(string A, const string &B) {
         unordered_map<string, int> m;
         A += " " + B;
         for (int i = 0, j; true; i = j + 1) {

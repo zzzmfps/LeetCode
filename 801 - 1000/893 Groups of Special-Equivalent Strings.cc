@@ -1,9 +1,10 @@
 // 12ms, 70.46%; 10.4MB, 50.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int numSpecialEquivGroups(const vector<string> &A)
-    {
+    int numSpecialEquivGroups(const vector<string> &A) {
         unordered_set<string> tmp;
         for (const auto &a : A) {
             vector<string> p(2, "");

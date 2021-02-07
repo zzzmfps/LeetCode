@@ -1,25 +1,25 @@
 // 8ms, 50.19%; 13.9MB, 34.04%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 private:
     map<pair<int, int>, double> record;
 
 public:
-    double soupServings(int N)
-    {
+    double soupServings(int N) {
         if (N > 4800) return 1.0;
         return helper(N, N);
     }
 
 private:
-    double helper(int a, int b)
-    {
+    double helper(int a, int b) {
         if (a <= 0 && b <= 0) return 0.5;
         if (a <= 0) return 1.0;
         if (b <= 0) return 0;

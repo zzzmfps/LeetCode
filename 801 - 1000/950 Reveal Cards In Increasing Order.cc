@@ -1,15 +1,16 @@
 // 8ms, 98.87%; 9MB, 86.91%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto _ = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> deckRevealedIncreasing(vector<int> &deck)
-    {
+    vector<int> deckRevealedIncreasing(vector<int> &deck) {
         int size = deck.size(), idx = 0;
         if (size < 2) return deck;
         vector<int> orders(size, -1);
@@ -19,14 +20,12 @@ public:
         }
         orders[helper(orders, idx, true)] = size - 1;
         sort(deck.begin(), deck.end());
-        for (auto &val : orders)
-            val = deck[val];
+        for (auto &val : orders) val = deck[val];
         return orders;
     }
 
 private:
-    int helper(const vector<int> &orders, int idx, bool isSkipped = false)
-    {
+    int helper(const vector<int> &orders, int idx, bool isSkipped = false) {
         int size = orders.size();
         for (int j = idx + 1; j < size; ++j)
             if (orders[j] < 0) {

@@ -1,9 +1,10 @@
 // 4ms, 62.63%; 8.5MB, 72.73%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    bool backspaceCompare(const string &S, const string &T)
-    { // simple simulation
+    bool backspaceCompare(const string &S, const string &T) { // simple simulation
         int p1 = S.size() - 1, p2 = T.size() - 1;
         int cnt1 = 0, cnt2 = 0;
         while (true) {

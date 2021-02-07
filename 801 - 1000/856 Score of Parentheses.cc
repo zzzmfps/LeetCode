@@ -1,15 +1,16 @@
 // 0ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    int scoreOfParentheses(const string &str)
-    {
+class Solution {
+public:
+    int scoreOfParentheses(const string &str) {
         int res = 0, layer = 0;
         for (int i = 0, size = str.size() - 1; i < size; ++i) {
             layer += (str[i] == '(' ? 1 : -1);

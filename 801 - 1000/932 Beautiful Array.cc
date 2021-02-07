@@ -1,15 +1,16 @@
 // 12ms, 77.73%; 12.8MB, 17.39%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> beautifulArray(int N)
-    {
+    vector<int> beautifulArray(int N) {
         vector<int> res;
         res.resize(N);
         iota(res.begin(), res.end(), 1);
@@ -18,8 +19,7 @@ public:
     }
 
 private:
-    void partition(vector<int> &v, int i, int j)
-    {
+    void partition(vector<int> &v, int i, int j) {
         if (j - i < 3) return;
         int k = (i + j + 1) >> 1;
         vector<int> tmp(j - k);
