@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.9MB, 70.59%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string decodeString(const string &s)
-    {
+    string decodeString(const string &s) {
         string res = "";
         stack<pair<int, string>> st;
         for (int i = 0, idx1, idx2; i < s.size();) { // 1, string ends with ']'

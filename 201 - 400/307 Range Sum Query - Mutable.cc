@@ -1,12 +1,14 @@
 // 28ms, 100.00%; 19.1MB, 71.34%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class NumArray
-{
+class NumArray {
 private:
     struct Bucket {
         int bSum = 0;
@@ -16,8 +18,7 @@ private:
     int bucketSize;
 
 public:
-    NumArray(const vector<int> &nums)
-    {
+    NumArray(const vector<int> &nums) {
         int size = nums.size();
         int bucketNums = int(sqrt(size << 1));
         bucketSize = (bucketNums >> 1);
@@ -32,15 +33,13 @@ public:
         }
     }
 
-    void update(int i, int val)
-    {
+    void update(int i, int val) {
         int j = i / bucketSize, k = i % bucketSize;
         sums[j].bSum += val - sums[j].block[k];
         sums[j].block[k] = val;
     }
 
-    int sumRange(int i, int j)
-    {
+    int sumRange(int i, int j) {
         int i1 = i / bucketSize, j1 = j / bucketSize;
         int i2 = i % bucketSize, j2 = j % bucketSize;
         int res = 0;

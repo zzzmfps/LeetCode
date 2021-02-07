@@ -1,15 +1,16 @@
 // 14ms, 99.72%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    int computeArea(int A, int B, int C, int D, int E, int F, int G, int H)
-    {
+class Solution {
+public:
+    int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
         int area1, area2, area3;
         area1 = abs(A - C) * abs(B - D);
         area2 = abs(E - G) * abs(F - H);

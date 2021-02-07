@@ -1,16 +1,17 @@
 // 4ms, 99.83%; 10MB, 42.82%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto _ = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int findDuplicate(const vector<int> &nums)
-    {
-        bool *tmp = new bool[nums.size()] {};
+    int findDuplicate(const vector<int> &nums) {
+        bool *tmp = new bool[nums.size()]{};
         for (auto n : nums) {
             if (tmp[n]) {
                 delete[] tmp;

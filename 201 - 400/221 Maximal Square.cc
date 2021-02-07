@@ -1,9 +1,10 @@
 // 20ms, 80.00%; 11.2MB, 51.85%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int maximalSquare(const vector<vector<char>> &matrix)
-    {
+    int maximalSquare(const vector<vector<char>> &matrix) {
         if (matrix.empty()) return 0;
         int row = matrix.size(), col = matrix[0].size();
         vector<vector<int>> dp(row, vector<int>(col, 0));
@@ -19,8 +20,7 @@ public:
     }
 
 private:
-    int helper(const vector<vector<char>> &matrix, vector<vector<int>> &dp)
-    {
+    int helper(const vector<vector<char>> &matrix, vector<vector<int>> &dp) {
         int flag = 0;
         int row = matrix.size(), col = matrix[0].size();
         for (int i = 0; i < row; ++i)

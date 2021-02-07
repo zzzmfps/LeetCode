@@ -1,4 +1,7 @@
 // 6ms, 71.60%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     char findTheDifference(const string &s, const string &t) const {

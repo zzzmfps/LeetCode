@@ -1,15 +1,16 @@
 // 4ms, 100.00%; 9.1MB, 99.68%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    int findKthLargest(const vector<int> &nums, int k)
-    {
+    int findKthLargest(const vector<int> &nums, int k) {
         auto p = minmax_element(nums.begin(), nums.end());
         int _min = *p.first, _max = *p.second, size = nums.size();
         if (k == 1) return _max;

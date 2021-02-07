@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.7MB, 76.92%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int lengthLongestPath(const string &input)
-    {
+    int lengthLongestPath(const string &input) {
         stack<string> st;
         st.push(input.substr(0, input.find('\n')));
         int curLen = st.top().size(), maxLen = (st.top().find('.') != string::npos ? curLen : 0);

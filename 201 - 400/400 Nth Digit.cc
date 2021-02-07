@@ -1,4 +1,7 @@
 // 4ms, 58.82%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int findNthDigit(int n) {
@@ -12,8 +15,7 @@ public:
         if (index == 0) index = digits;
         long num = pow(10, digits - 1);
         num += (index == digits) ? n / digits - 1 : n / digits;
-        for (int i = index; i < digits; ++i)
-            num /= 10;
+        for (int i = index; i < digits; ++i) num /= 10;
         return num % 10;
     }
 };

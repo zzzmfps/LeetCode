@@ -1,18 +1,17 @@
 // 20ms, 83.86%; 21.5MB, 91.67%
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
 public:
-    int kthSmallest(TreeNode *root, int k)
-    {
+    int kthSmallest(TreeNode *root, int k) {
         stack<TreeNode *> st;
         st.push(root);
         bool flag = true; // cursor has NOT reached the left-bottom of the subtree

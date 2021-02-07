@@ -1,4 +1,7 @@
 // 2ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int getSum(int a, int b) {

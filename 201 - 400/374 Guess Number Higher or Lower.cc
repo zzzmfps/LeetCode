@@ -1,4 +1,7 @@
 // 3ms, 21.34%
+#include <bits/stdc++.h>
+using namespace std;
+
 int guess(int num);
 
 class Solution {

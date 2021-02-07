@@ -1,15 +1,16 @@
 // 0ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    int countDigitOne(int n)
-    {
+class Solution {
+public:
+    int countDigitOne(int n) {
         long long res = 0, rn = 1, left, mid, right;
         while (n >= rn) {
             left = n / rn / 10;

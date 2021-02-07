@@ -1,17 +1,19 @@
 // 4ms, 82.37%; 8.6MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 private:
-    const string arr1[5] = { "", "", "Thousand", "Million", "Billion" };
-    const string arr2[10] = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
-    const string arr3[10] = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-    const string arr4[10] = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+    const string arr1[5] = {"", "", "Thousand", "Million", "Billion"};
+    const string arr2[10] = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+    const string arr3[10] = {"Ten",     "Eleven",  "Twelve",    "Thirteen", "Fourteen",
+                             "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+    const string arr4[10] = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
 public:
-    string numberToWords(int num)
-    {
+    string numberToWords(int num) {
         if (num == 0) return "Zero";
-        
+
         string strNum = to_string(num);
         int tmp = strNum.size() % 3;
         if (tmp > 0) strNum = string(3 - tmp, '0') + strNum;

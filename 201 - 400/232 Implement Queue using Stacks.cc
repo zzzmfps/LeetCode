@@ -1,23 +1,20 @@
 // 4ms, 0.00%
-class MyQueue
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class MyQueue {
 private:
     stack<int> st;
-    
+
 public:
-    MyQueue()
-    {
-    }
-    
-    void push(int x)
-    {
+    MyQueue() {}
+
+    void push(int x) {
         pushHelper(x);
     }
-    
-    void pushHelper(int x)
-    {
-        if(st.empty())
-        {
+
+    void pushHelper(int x) {
+        if (st.empty()) {
             st.push(x);
             return;
         }
@@ -26,22 +23,18 @@ public:
         pushHelper(x);
         st.push(tmp);
     }
-    
-    int pop()
-    {
+
+    int pop() {
         int tmp = st.top();
         st.pop();
         return tmp;
     }
-    
-    int peek()
-    {
+
+    int peek() {
         return st.top();
     }
-    
-    bool empty()
-    {
+
+    bool empty() {
         return st.empty();
     }
 };
-

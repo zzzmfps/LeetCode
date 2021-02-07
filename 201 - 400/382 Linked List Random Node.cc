@@ -1,12 +1,12 @@
 // 30ms, 99.76%
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+#include <bits/stdc++.h>
+using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
 
 static int x = []() {
     ios_base::sync_with_stdio(false); // toggles off the synchronization
@@ -14,23 +14,18 @@ static int x = []() {
     return 0;
 }();
 
-class Solution
-{
-  private:
+class Solution {
+private:
     ListNode *a_list;
     default_random_engine generator = default_random_engine();
 
-  public:
+public:
     /** @param head The linked list's head.
         Note that the head is guaranteed to be not null, so it contains at least one node. */
-    Solution(ListNode *head)
-        : a_list(head)
-    {
-    }
+    Solution(ListNode *head) : a_list(head) {}
 
     /** Returns a random node's value. */
-    int getRandom()
-    {
+    int getRandom() {
         // failed to include <chrono> on leetcode.com
         // unsigned seed = chrono::system_clock::now().time_since_epoch().count();
         // accepted - default_random_engine generator(seed);
@@ -40,14 +35,12 @@ class Solution
 
         ListNode *trav = a_list;
         int length = 0;
-        while (trav)
-        {
+        while (trav) {
             trav = trav->next;
             ++length;
         }
         trav = a_list, length *= urd(generator);
-        while (length)
-        {
+        while (length) {
             trav = trav->next;
             --length;
         }
