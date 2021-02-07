@@ -1,4 +1,7 @@
 // 6ms, 31.93%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     bool checkRecord(const string &s) {
@@ -7,8 +10,7 @@ public:
             if (c == 'L') {
                 conti_L += 1;
                 if (conti_L > 2) return false;
-            }
-            else {
+            } else {
                 conti_L = 0;
                 if (c == 'A') {
                     total_A += 1;

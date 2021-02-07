@@ -1,15 +1,16 @@
 // 52ms, 100.00%; 14.2MB, 100.00%
+#include <bits/stdc++.h>
+using namespace std;
+
 auto x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
+class Solution {
 public:
-    vector<int> findDiagonalOrder(const vector<vector<int>> &matrix)
-    {
+    vector<int> findDiagonalOrder(const vector<vector<int>> &matrix) {
         vector<int> res;
         if (matrix.empty()) return res;
 

@@ -1,15 +1,16 @@
 // 4ms, 98.82%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
-    ios_base::sync_with_stdio(false);  // toggles off the synchronization
-    cin.tie(nullptr);                  // ties cin with nullptr, not cout
+    ios_base::sync_with_stdio(false); // toggles off the synchronization
+    cin.tie(nullptr);                 // ties cin with nullptr, not cout
     return 0;
 }();
 
-class Solution
-{
-  public:
-    string fractionAddition(const string &expression)
-    {
+class Solution {
+public:
+    string fractionAddition(const string &expression) {
         istringstream iss(expression);
         int A = 0, B = 1, a, b;
         char skip;

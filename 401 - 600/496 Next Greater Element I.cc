@@ -1,17 +1,18 @@
 // 4ms, 100.0%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    vector<int> nextGreaterElement(const vector<int> &findNums, const vector<int> &nums)
-    {
+class Solution {
+public:
+    vector<int> nextGreaterElement(const vector<int> &findNums, const vector<int> &nums) {
         if (findNums.empty()) return vector<int>();
-        
+
         int size1 = findNums.size(), size2 = nums.size();
 
         unordered_map<int, int> index(size2 * 2);

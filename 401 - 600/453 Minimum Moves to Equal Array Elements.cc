@@ -1,4 +1,7 @@
 // 51ms, 90.20%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int minMoves(vector<int> &nums) {

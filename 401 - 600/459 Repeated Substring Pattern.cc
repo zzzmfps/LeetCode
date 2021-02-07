@@ -1,15 +1,16 @@
 // 16ms, 98.28%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  public:
-    bool repeatedSubstringPattern(const string &s)
-    {
+class Solution {
+public:
+    bool repeatedSubstringPattern(const string &s) {
         int size = s.size(), limit = size / 2;
         for (int i = 1; i <= limit; ++i) {
             if (size % i != 0) continue;

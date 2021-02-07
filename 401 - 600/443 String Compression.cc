@@ -1,4 +1,7 @@
 // 9ms, 55.04%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int compress(vector<char> &chars) {

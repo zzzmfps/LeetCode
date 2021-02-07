@@ -1,10 +1,11 @@
 // 56ms, 93.95%; 56.6MB, 10.53%
-/*
-// Definition for a Node.
+#include <bits/stdc++.h>
+using namespace std;
+
 class Node {
 public:
     int val;
-    vector<Node*> children;
+    vector<Node *> children;
 
     Node() {}
 
@@ -12,17 +13,15 @@ public:
         val = _val;
     }
 
-    Node(int _val, vector<Node*> _children) {
+    Node(int _val, vector<Node *> _children) {
         val = _val;
         children = _children;
     }
 };
-*/
-class Solution
-{
+
+class Solution {
 public:
-    vector<int> preorder(Node *root)
-    {
+    vector<int> preorder(Node *root) {
         if (!root) return vector<int>();
         vector<Node *> st = {root};
         vector<int> res;

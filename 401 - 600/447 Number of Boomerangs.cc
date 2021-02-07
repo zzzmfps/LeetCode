@@ -1,26 +1,26 @@
 // 226ms, 77.68%
+#include <bits/stdc++.h>
+using namespace std;
+
 static int x = []() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return 0;
 }();
 
-class Solution
-{
-  private:
+class Solution {
+private:
     unordered_map<int, int> *dists;
     int psize;
 
-  public:
-    int numberOfBoomerangs(const vector<pair<int, int>> &points)
-    {
+public:
+    int numberOfBoomerangs(const vector<pair<int, int>> &points) {
         getAllDists(points);
         return getBoomerangsNum();
     }
 
-  private:
-    void getAllDists(const vector<pair<int, int>> &points)
-    {
+private:
+    void getAllDists(const vector<pair<int, int>> &points) {
         // better method: use the same 1-dimension array in every for-loop
         // to record the distance between point i and point j (dists[j] = <dist>).
         psize = points.size();
@@ -34,8 +34,7 @@ class Solution
         }
     }
 
-    int getBoomerangsNum()
-    {
+    int getBoomerangsNum() {
         int sum = 0;
         for (int i = 0; i < psize; ++i)
             for (const auto &p : dists[i]) sum += p.second * (p.second - 1);

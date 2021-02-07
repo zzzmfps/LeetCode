@@ -1,9 +1,10 @@
 // 4ms, 70.47%; 8.7MB, 50.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int findLUSlength(vector<string> &strs)
-    {
+    int findLUSlength(vector<string> &strs) {
         auto sortRule = [](const string &x, const string &y) { return x.size() > y.size(); };
         auto isSubseq = [](const string &x, const string &y) {
             int i = 0, size = y.size();

@@ -1,4 +1,7 @@
 // 202ms, 96.02%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int distributeCandies(vector<int> &candies) {

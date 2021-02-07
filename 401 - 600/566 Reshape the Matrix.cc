@@ -1,9 +1,10 @@
 // 28ms, 99.20%; 11.6MB, 96.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    vector<vector<int>> matrixReshape(const vector<vector<int>> &nums, int r, int c)
-    {
+    vector<vector<int>> matrixReshape(const vector<vector<int>> &nums, int r, int c) {
         int row = nums.size(), col = nums[0].size();
         if (row * col != r * c) return nums;
         vector<vector<int>> ret(r, vector<int>(c));

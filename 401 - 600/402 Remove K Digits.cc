@@ -1,9 +1,10 @@
 // 24ms, 23.29%; 8.9MB, 100.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    string removeKdigits(string num, int k)
-    {
+    string removeKdigits(string num, int k) {
         if (num.size() == k) return "0";
         while (k--) {
             auto it = prev(is_sorted_until(num.begin(), num.end()));

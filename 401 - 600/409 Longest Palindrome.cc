@@ -1,4 +1,7 @@
 // 6ms, 96.16%
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int longestPalindrome(string s) {        

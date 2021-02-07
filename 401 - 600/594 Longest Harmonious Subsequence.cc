@@ -1,9 +1,10 @@
 // 104ms, 54.50%; 20.6MB, 33.33%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int findLHS(const vector<int> &nums)
-    {
+    int findLHS(const vector<int> &nums) {
         if (nums.empty()) return 0;
         map<int, int> tmp;
         for (auto n : nums) ++tmp[n];

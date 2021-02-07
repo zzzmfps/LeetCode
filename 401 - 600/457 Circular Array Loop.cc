@@ -1,9 +1,10 @@
 // 0ms, 100.00%; 8.7MB, 10.00%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    bool circularArrayLoop(const vector<int> &nums)
-    {
+    bool circularArrayLoop(const vector<int> &nums) {
         int size = nums.size();
         vector<bool> isVisited(size, false);
         for (int i = 0; i < size; ++i) {
@@ -16,8 +17,7 @@ public:
     }
 
 private:
-    bool helper(const vector<int> &nums, int i, vector<bool> &isVisited)
-    {
+    bool helper(const vector<int> &nums, int i, vector<bool> &isVisited) {
         int size = nums.size();
         int j = (i + nums[i]) % size;
         if (j < 0) j += size;

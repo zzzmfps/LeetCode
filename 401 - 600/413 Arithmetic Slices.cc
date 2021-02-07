@@ -1,9 +1,10 @@
 // 4ms, 63.79%; 8.8MB, 43.75%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int numberOfArithmeticSlices(const vector<int> &A)
-    {
+    int numberOfArithmeticSlices(const vector<int> &A) {
         if (A.size() < 3) return 0;
         int diff = A[1] - A[0], count = 1, res = 0;
         for (int i = 2, size = A.size(); i < size; ++i) {

@@ -1,4 +1,16 @@
 // 7ms, 20.27%
+#include <bits/stdc++.h>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
     int sumOfLeftLeaves(TreeNode *root) {
@@ -7,4 +19,4 @@ public:
             return root->left->val + sumOfLeftLeaves(root->right);
         return sumOfLeftLeaves(root->left) + sumOfLeftLeaves(root->right);
     }
-}; 
+};

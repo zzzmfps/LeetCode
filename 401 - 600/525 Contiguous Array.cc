@@ -1,9 +1,10 @@
 // 128ms, 54.14%; 26.7MB, 16.67%
-class Solution
-{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int findMaxLength(const vector<int> &nums)
-    {
+    int findMaxLength(const vector<int> &nums) {
         int length = nums.size();
         int res = 0, record = 0;
         unordered_map<int, vector<int>> index;
